@@ -46,9 +46,9 @@ class DoublyLinkedList {
 					firstPatient.setPreviousPatient (null);
 					return true;
 				}
-				Patient oneBeforeCheck = firstPatient;
+				DoublyLinkedPatient oneBeforeCheck = firstPatient;
 				while (oneBeforeCheck != null) {
-					DoublyLinkedPateient toCheck = oneBeforeCheck.getNextPatient();
+					DoublyLinkedPatient toCheck = oneBeforeCheck.getNextPatient();
 					if (toCheck.getName().equals(name) && toCheck.getAge() == age) {
 						oneBeforeCheck.setNextPatient(toCheck.getNextPatient());
 						toCheck.getNextPatient().setPreviousPatient(oneBeforeCheck);
